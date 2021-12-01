@@ -9,7 +9,7 @@ CREATE TABLE public.ingredient (
 CREATE TABLE public.pizza (
                 id INTEGER NOT NULL,
                 nom VARCHAR(50) NOT NULL,
-                prixHt DOUBLE PRECISION NOT NULL,
+                prix_Ht DOUBLE PRECISION NOT NULL,
                 recette TEXT NOT NULL,
                 tva100 DOUBLE PRECISION NOT NULL,
                 CONSTRAINT pizza_pk PRIMARY KEY (id)
@@ -28,7 +28,7 @@ CREATE TABLE public.adresse (
                 id INTEGER NOT NULL,
                 numero INTEGER NOT NULL,
                 rue VARCHAR(50) NOT NULL,
-                codePostal INTEGER NOT NULL,
+                code_postal INTEGER NOT NULL,
                 ville VARCHAR(100) NOT NULL,
                 CONSTRAINT adresse_pk PRIMARY KEY (id)
 );
@@ -87,8 +87,8 @@ CREATE TABLE public.panier (
 
 CREATE TABLE public.commande (
                 id INTEGER NOT NULL,
-                paiement BOOLEAN NOT NULL,
-                prixHt DOUBLE PRECISION NOT NULL,
+                paiement_effectue BOOLEAN NOT NULL,
+                prix_Ht DOUBLE PRECISION NOT NULL,
                 tva100 DOUBLE PRECISION NOT NULL,
                 date DATE,
                 etat VARCHAR(20) NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE public.commande (
 
 CREATE TABLE public.paiement (
                 id INTEGER NOT NULL,
-                typePaiement VARCHAR(20) NOT NULL,
+                type_paiement VARCHAR(20) NOT NULL,
                 date DATE,
                 paiement BOOLEAN NOT NULL,
                 id_commande INTEGER NOT NULL,
