@@ -20,7 +20,7 @@ INSERT INTO public.ingredient (id, nom) VALUES (4, 'olive');
 INSERT INTO public.ingredient (id, nom) VALUES (5, 'mozzarella');
 INSERT INTO public.livraison (id, date, id_client, id_commande) VALUES (1, '2021-04-20', 1, 2);
 INSERT INTO public.paiement (id, type_paiement, id_commande, date, paiement) VALUES (1, 'cb', 2, '2021-04-20', true);
-INSERT INTO public.paiement (id, type_paiement, id_commande, date, paiement) VALUES (1, 'cheques', 2, '2021-04-20', true);
+INSERT INTO public.paiement (id, type_paiement, id_commande, date, paiement) VALUES (2, 'cheques', 2, '2021-04-20', true);
 INSERT INTO public.pizza_ingredient (id_pizza, id_ingredient, quantite) VALUES (1, 1, 250);
 INSERT INTO public.pizza_ingredient (id_pizza, id_ingredient, quantite) VALUES (1, 2, 1);
 INSERT INTO public.pizza_ingredient (id_pizza, id_ingredient, quantite) VALUES (1, 3, 2);
